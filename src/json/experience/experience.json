@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Paz Technologies",
+    "designation": "Team Lead",
+    "startDate": "September 2024",
+    "endDate": "Present",
+    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "companyLogo": "",
+    "technologies": [
+      "Next Js",
+      "Nest Js",
+      "Mongo DB",
+      "MySql"
+    ]
+  },
+  {
+    "company": "Digitaleap",
+    "designation": "Software Engineer",
+    "startDate": "November 2021",
+    "endDate": "September 2024",
+    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "companyLogo": "",
+    "technologies": [
+      "React",
+      "Next js",
+      "JavaScript",
+      "Mongo DB",
+      "Rest API"
+    ]
+  },
+  {
+    "company": "Minibig",
+    "designation": "Assistant Developer",
+    "startDate": "January 2020",
+    "endDate": "March 2020",
+    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "companyLogo": "",
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "JavaScript"
+    ]
+  }
+]
