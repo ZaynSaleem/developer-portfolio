@@ -7,6 +7,13 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "Agustina-Signature";
+  src: url("/fonts/Agustina-Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -21,4 +28,22 @@ body {
 }
 .container {
   @apply mx-auto max-w-full md:max-w-[95%] lg:max-w-[90%] xl:max-w-[70%] px-4;
+}
+
+.std-backdrop-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.box-shadow-header {
+  box-shadow: 0 12px 32px #05051e66, 0 -8px 32px #e2e8ff1f inset;
+}
+
+.linear-gradient-header {
+  background-image: linear-gradient(
+    96.34deg,
+    color(display-p3 0.5725490196 0.4156862745 1/1) 0%,
+    color(display-p3 1 0.4666666667 0.6901960784/1) 50%,
+    color(display-p3 1 0.7019607843 0.4039215686/1) 100%
+  );
 }
