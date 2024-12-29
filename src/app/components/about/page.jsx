@@ -2,7 +2,7 @@ import Heading from "@/components/heading/heading";
 
 const About = () => {
   return (
-    <div className="container flex flex-col gap-8 justify-center items-center text-center pt-10">
+    <div className="container flex flex-col gap-8 justify-center items-center text-center">
       <Heading title={"About Me"} />
       <p className="text-center">
         Lorem Ipsum is simply dummy text of the printing and typesetting
