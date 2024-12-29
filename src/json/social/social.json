@@ -1,0 +1,22 @@
+[
+    {
+        "logo": "/assets/social/linkedIn.svg",
+        "link": "https://www.linkedin.com/in/zayn-saleem/",
+        "alt": "linkedin - Zain"
+    },
+    {
+        "logo": "/assets/social/github.svg",
+        "link": "https://github.com/ZaynSaleem",
+        "alt": "Github - Zain"
+    },
+    {
+        "logo": "/assets/social/medium.svg",
+        "link": "https://medium.com/@zainsaleem456",
+        "alt": "Medium - Zain"
+    },
+    {
+        "logo": "/assets/social/instagram.svg",
+        "link": "#",
+        "alt": "Instagram - Zain"
+    }
+]

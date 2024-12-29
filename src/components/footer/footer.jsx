@@ -1,0 +1,29 @@
+import React from "react";
+import SocialJsonData from "@/json/social/social.json";
+import Link from "next/link";
+import Image from "next/image";
+const Footer = () => {
+  return (
+    <div className="container flex gap-6 justify-center py-10">
+      {SocialJsonData && SocialJsonData?.length
+        ? SocialJsonData?.map((content, index) => {
+            return (
+              <Link href={content?.link} key={index}>
+                <Image
+                  src={content?.logo}
+                  alt={content?.alt}
+                  color="white"
+                  width={30}
+                  height={30}
+                  priority
+                  quality={100}
+                />
+              </Link>
+            );
+          })
+        : ""}
+    </div>
+  );
+};
+
+export default Footer;
