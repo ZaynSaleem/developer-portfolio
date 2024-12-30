@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
 
       {/* ============= HEADLINE ============= */}
-      <div className="text-center text-2xl !leading-tight font-extrabold lg:text-6xl lg:max-w-[60%]">
+      <div className="text-center text-2xl !leading-tight font-extrabold sm:text-4xl lg:text-6xl lg:max-w-[60%]">
         <span className="text-gray-300"> Hi, I’m </span>{" "}
         {/* <span className="bg-clip-text bg-gradient-to-r from-[#FF8660] to-[#9A33FF] text-transparent"> */}
         <span className="text-teal-400">
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
       {/* ============= DESCRIPTION ============= */}
 
-      <p className="text-center lg:max-w-[50%]">
+      <p className="text-center container">
         I am a seasoned full-stack software engineer with over 8 years of
         professional experience, specializing in backend development. My
         expertise lies in crafting robust and scalable SaaS-based architectures
