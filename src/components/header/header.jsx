@@ -51,15 +51,17 @@ export const Header = () => {
       }`}
       style={{ transition: "all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1)" }}
     >
-      <div className="w-full max-w-[90%] xl:max-w-[1223px] flex justify-between items-center px-2 py-2 rounded-2xl bg-[#8e8e8e0f] border border-[#e2e8ff1a] box-shadow-header mt-4 std-backdrop-blur">
+      <div className="w-full max-w-[90%] flex justify-between items-center px-2 py-2 rounded-2xl bg-[#8e8e8e0f] border border-[#e2e8ff1a] box-shadow-header mt-4 std-backdrop-blur xl:max-w-[1223px]">
         {/* Logo */}
-        <div className="text-3xl leading-normal pl-5">
+        <div className="text-xl leading-normal pl-5 md:text-2xl lg:text-3xl">
           <span className="text-gray-300"> {"<"} </span>
-          <span className="font-agustina capitalize font-medium text-teal-400">zain saleem </span>
+          <span className="font-agustina capitalize font-medium text-teal-400">
+            zain saleem{" "}
+          </span>
           <span className="text-gray-300"> {" />"} </span>
         </div>
 
-        <div className="flex gap-6 items-center">
+        <div className="flex items-center gap-3 text-sm md:gap-5 lg:gap-6 lg:text-base">
           {navItems && navItems?.length
             ? navItems?.map((content, index) => {
                 return (
@@ -76,7 +78,7 @@ export const Header = () => {
 
         {/* ============== NAV ITEMS ============== */}
         {/* linear-gradient-header */}
-        <div className="border border-teal-400 text-teal-400 rounded-xl text-lg py-2 px-8 font-medium">
+        <div className="border border-teal-400 text-teal-400 rounded-xl py-2 font-medium sm:px-4 lg:text-lg lg:px-8">
           Hire me
         </div>
       </div>
