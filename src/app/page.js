@@ -1,8 +1,11 @@
+import Image from "next/image";
 import HeroSection from "./components/hero/hero";
 import AboutSection from "./components/about/page";
 import ProjectSection from "./components/projects/project";
 import ExperienceSection from "./components/experience/page";
-import Image from "next/image";
+import Qualification from "./components/qualification/page";
+import Skills from "./components/skills/page";
+import Blogs from "./components/blogs/page";
 
 export default function Home() {
   return (
@@ -27,6 +30,9 @@ export default function Home() {
       <AboutSection />
       <ProjectSection />
       <ExperienceSection />
+      <Qualification />
+      <Skills/>
+      <Blogs/>
     </div>
   );
 }
