@@ -1,9 +1,13 @@
-import Heading from "@/components/heading/heading";
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { MdArrowForward } from "react-icons/md";
+import Heading from "@/components/heading/heading";
+import { ProjectDetailModal } from "@/components/modal/projectDetailModal/projectDetailModal";
 
 const Projects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const projects = [
     {
       title: "OTO Work Website",
@@ -36,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-8 container">
+    <div className="flex flex-col gap-8 container relative">
       <Heading title={"PROJECTS"} />
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -45,7 +49,7 @@ const Projects = () => {
               return (
                 <div
                   key={outerIndex}
-                  className="col-span-1 w-full rounded-xl flex flex-col gap-4 overflow-hidden shadow-xl p-4 border bg-[#8e8e8e0f] border-[#e2e8ff1a] box-shadow-header std-backdrop-blur cursor-pointer"
+                  className="col-span-1 w-full rounded-xl flex flex-col gap-4 overflow-hidden shadow-xl p-4 border bg-[#8e8e8e0f] border-[#e2e8ff1a] box-shadow-header std-backdrop-blur cursor-pointer group"
                 >
                   {/* ----------- IMAGE ----------- */}
                   <div className="max-h-56 h-56 bg-slate-400 rounded-xl overflow-hidden relative">
@@ -56,7 +60,7 @@ const Projects = () => {
                       priority
                       objectFit="cover"
                       quality={100}
-                      className="opacity-85"
+                      className="opacity-70 transform transition-all ease-in-out duration-700 group-hover:opacity-100 group-hover:scale-105"
                     />
                   </div>
 
@@ -87,18 +91,26 @@ const Projects = () => {
                         })}
                     </div>
 
-                    <div className="flex gap-2 items-center pt-3 cursor-pointer group">
+                    <button
+                      className="flex gap-2 items-center pt-3 cursor-pointer group"
+                      onClick={() => setIsModalOpen(true)}
+                    >
                       <span className="text-sm font-medium">View Project</span>
                       <span className="rounded-full w-7 h-7 border flex justify-center items-center group-hover:bg-white group-hover:text-black group-hover:-rotate-45 transform transition-all ease-in-out duration-500">
                         <MdArrowForward size={20} />
                       </span>
-                    </div>
+                    </button>
                   </div>
                 </div>
               );
             })
           : ""}
       </div>
+
+      <ProjectDetailModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={(value) => setIsModalOpen(value)}
+      />
     </div>
   );
 };

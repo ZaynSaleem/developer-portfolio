@@ -47,3 +47,21 @@ body {
     color(display-p3 1 0.7019607843 0.4039215686/1) 100%
   );
 }
+
+
+/* ============================ MODAL ANIMATION ============================ */
+
+.modal-animate {
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
