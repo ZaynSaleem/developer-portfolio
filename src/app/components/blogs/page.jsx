@@ -1,15 +1,14 @@
+import Heading from "@/components/heading/heading";
 import React from "react";
 
 const Blogs = () => {
   return (
     <section class="py-16">
       <div class="container mx-auto">
-        <h2 class="text-4xl text-[#66e3c4] font-bold text-center mb-12 uppercase tracking-widest">
-          Blogs & Insights
-        </h2>
+       <Heading title={'Blogs & Insights'}/>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* <!-- Blog Card --> */}
-          <div class="relative group bg-gradient-to-b from-[#0e0e38] to-[#0b0b29] rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-transform duration-300">
+          <div class="bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 max-w-md max-h-[20rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600">
             <img
               src="/blog1.jpg"
               alt="Blog 1"
