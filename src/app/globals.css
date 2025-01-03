@@ -47,7 +47,13 @@ body {
     color(display-p3 1 0.7019607843 0.4039215686/1) 100%
   );
 }
-
+.linear-gradient-header-1 {
+  background-image: linear-gradient(
+    340deg,
+    #ff6995 8.06%,
+    #73cdff 83.97%
+  );
+}
 
 /* ============================ MODAL ANIMATION ============================ */
 
