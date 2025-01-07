@@ -55,6 +55,21 @@ body {
   );
 }
 
+.padding-top-64 {
+  padding-top: clamp(40px, 2.5vw, 64px);
+}
+
+/* =============== PADDING BOTTOM ============= */
+.padding-bottom-148 {
+  padding-bottom: clamp(80px, 5vw + 1rem, 148px);
+}
+
+
+.text-80 {
+  font-size: clamp(32px, 2.35vw + 1rem, 80px);
+  line-height: 1em;
+}
+
 /* ============================ MODAL ANIMATION ============================ */
 
 .modal-animate {
