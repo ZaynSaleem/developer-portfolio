@@ -1,4 +1,5 @@
 "use client";
+import anime from "animejs";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CgMenuLeft } from "react-icons/cg";
@@ -48,8 +49,28 @@ export const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isSidebarOpen) {
+      animateSidebarText();
+    }
+  }, [isSidebarOpen]);
+
   const toggleSideBar = () => {
     SetIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const animateSidebarText = () => {
+    // if (!sidebarRef.current) return;
+    // const items = sidebarRef.current.querySelectorAll(".animatable-text");
+    // anime({
+    //   targets: items,
+    //   translateY: [50, 0], // Start from 50px above to original position
+    //   opacity: [0, 1], // Fade in
+    //   scale: [0.9, 1], // Slight zoom-in effect
+    //   easing: "easeOutExpo",
+    //   duration: 800, // Duration of animation for each element
+    //   delay: anime.stagger(150), // Add delay between animations
+    // });
   };
 
   return (
@@ -97,9 +118,9 @@ export const Header = () => {
 
           {/* Sidebar for mobile */}
           <div
+            ref={sidebarRef}
             className={`md:hidden w-full h-full py-2 bg-grey-700 z-50 transition-transform ease-in-out duration-500 transform overflow-scroll`}
           >
-            {/* ref={sidebarRef} */}
             {/* Close Button */}
             <div className="container flex h-full flex-col justify-between">
               {/* Close Button */}
@@ -113,17 +134,21 @@ export const Header = () => {
                   <span className="text-gray-300"> {" />"} </span>
                 </div>
 
-                <div className={`transform transition-all ease-in-out duration-500 ${isSidebarOpen ? "rotate-180" : "rotate-0"}`}>
+                <div
+                  className={`transform transition-all ease-in-out duration-500 ${
+                    isSidebarOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                >
                   {isSidebarOpen ? (
                     <IoIosClose
-                    className="transition-all ease-in-out duration-200"
+                      className="transition-all ease-in-out duration-200"
                       size={36}
                       color="#2dd4bf"
                       onClick={toggleSideBar}
                     />
                   ) : (
                     <IoIosMenu
-                    className="transition-all ease-in-out duration-200"
+                      className="transition-all ease-in-out duration-200"
                       size={36}
                       color="#2dd4bf"
                       onClick={toggleSideBar}
