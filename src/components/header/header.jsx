@@ -1,11 +1,13 @@
 "use client";
 import anime from "animejs";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CgMenuLeft } from "react-icons/cg";
 import { IoIosClose, IoIosMenu, IoMdClose } from "react-icons/io";
 
 export const Header = () => {
+  const sidebarRef = useRef();
+
   const navItems = [
     {
       title: "Home",
@@ -60,17 +62,18 @@ export const Header = () => {
   };
 
   const animateSidebarText = () => {
-    // if (!sidebarRef.current) return;
-    // const items = sidebarRef.current.querySelectorAll(".animatable-text");
-    // anime({
-    //   targets: items,
-    //   translateY: [50, 0], // Start from 50px above to original position
-    //   opacity: [0, 1], // Fade in
-    //   scale: [0.9, 1], // Slight zoom-in effect
-    //   easing: "easeOutExpo",
-    //   duration: 800, // Duration of animation for each element
-    //   delay: anime.stagger(150), // Add delay between animations
-    // });
+    if (!sidebarRef.current) return;
+    const items = sidebarRef.current.querySelectorAll(".animatable-text");
+    console.log({items})
+    anime({
+      targets: items,
+      translateY: [50, 0], // Start from 50px above to original position
+      opacity: [0, 1], // Fade in
+      scale: [0.9, 1], // Slight zoom-in effect
+      easing: "easeOutExpo",
+      duration: 800, // Duration of animation for each element
+      delay: anime.stagger(150), // Add delay between animations
+    });
   };
 
   return (
@@ -118,7 +121,7 @@ export const Header = () => {
 
           {/* Sidebar for mobile */}
           <div
-            ref={sidebarRef}
+           
             className={`md:hidden w-full h-full py-2 bg-grey-700 z-50 transition-transform ease-in-out duration-500 transform overflow-scroll`}
           >
             {/* Close Button */}
@@ -162,6 +165,7 @@ export const Header = () => {
         </div>
 
         <div
+         ref={sidebarRef}
           className={`bg-[#28a69b0d] backdrop-blur-2xl border border-[#e2e8ff1a] box-shadow-header w-full py-9 absolute max-w-[90%] mt-4 mx-auto rounded-b-2xl z-0 transform transition-all ease-in-out duration-300 md:hidden ${
             isSidebarOpen
               ? "min-h-[90vh] max-h-[90vh] top-6 visible opacity-100"
@@ -175,7 +179,7 @@ export const Header = () => {
                     <Link
                       key={index}
                       href={item?.url || "#"}
-                      className="animatable-text text-teal-500 text-80 uppercase font-medium opacity-1 hover:transform hover:transition-all hover:ease-in-out hover:duration-300 hover:text-gold-200"
+                      className="animatable-text text-teal-500 text-80 uppercase font-medium opacity-0 hover:transform hover:transition-all hover:ease-in-out hover:duration-300 hover:text-gold-200"
                     >
                       {/* onClick={toggleSidebar} */}
                       {item?.title}
@@ -186,7 +190,7 @@ export const Header = () => {
 
             <div className="flex flex-col gap-20 padding-top-64 ">
               {/* ==================== SOCIAL ==================== */}
-              <div className="flex flex-col gap-5 animatable-text opacity-1">
+              <div className="flex flex-col gap-5 animatable-text opacity-0">
                 <span className="text-teal-500/75 text-sm font-medium uppercase">
                   Interest
                 </span>
@@ -198,7 +202,7 @@ export const Header = () => {
                 </div>
               </div>
               {/* ==================== INTEREST ==================== */}
-              <div className="flex flex-col gap-5 animatable-text opacity-1">
+              <div className="flex flex-col gap-5 animatable-text opacity-0">
                 <span className="text-teal-500/75 text-sm font-medium uppercase">
                   Social
                 </span>
