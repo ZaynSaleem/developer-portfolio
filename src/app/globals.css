@@ -6,6 +6,9 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: "Agustina-Signature";
@@ -25,6 +28,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 .container {
   @apply mx-auto max-w-full md:max-w-[95%] lg:max-w-[90%] xl:max-w-[70%] px-4;
@@ -48,11 +52,54 @@ body {
   );
 }
 .linear-gradient-header-1 {
+  background-image: linear-gradient(340deg, #ff6995 8.06%, #73cdff 83.97%);
+}
+
+.bg-custom-gradient {
   background-image: linear-gradient(
-    340deg,
-    #ff6995 8.06%,
-    #73cdff 83.97%
+    180deg,
+    rgba(24, 204, 252, 0) 0%,
+    #18ccfc 20%,
+    #6344f5 32.5%,
+    rgba(174, 72, 255, 0) 100%
   );
+}
+
+.border-gradient {
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(24, 204, 252, 0) 0%,
+    #18ccfc 20%,
+    #6344f5 32.5%,
+    rgba(174, 72, 255, 0) 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 204, 252, 0) 0%,
+    #18ccfc 20%,
+    #6344f5 32.5%,
+    rgba(174, 72, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Blog Card */
+.blog-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hover Effects */
+.blog-card:hover {
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  /* transform: translateY(-5px); */
+  transition: all 0.5s ease-in-out;
 }
 
 .padding-top-64 {
@@ -63,7 +110,6 @@ body {
 .padding-bottom-148 {
   padding-bottom: clamp(80px, 5vw + 1rem, 148px);
 }
-
 
 .text-80 {
   font-size: clamp(32px, 2.35vw + 1rem, 80px);
