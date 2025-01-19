@@ -11,28 +11,30 @@ export const Header = () => {
   const navItems = [
     {
       title: "Home",
-      link: "",
+      link: "home",
     },
     {
       title: "About",
-      link: "",
-    },
-    {
-      title: "Career",
-      link: "",
+      link: "about",
     },
     {
       title: "Projects",
-      link: "",
+      link: "projects",
+    },
+    {
+      title: "Career",
+      link: "career",
     },
     {
       title: "Blogs",
-      link: "",
+      link: "blogs",
     },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, SetIsSidebarOpen] = useState(true);
+  const [activeSection, setActiveSection] = useState("");
+
   // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Handle scroll effect
@@ -51,6 +53,38 @@ export const Header = () => {
     };
   }, []);
 
+  // Function to handle scroll and detect the active section
+  useEffect(() => {
+    const handleScroll = () => {
+      navItems.forEach((item) => {
+        const section = document.getElementById(item?.link);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const offset = window.innerHeight / 3; // Adjust based on when it should be active
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setActiveSection(item?.link);
+          }
+        }
+      });
+    };
+
+    // Add scroll listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [navItems]);
+
+  // Smooth scroll on click
+  const handleSmoothScroll = (link) => {
+    const section = document.getElementById(link);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   useEffect(() => {
     if (isSidebarOpen) {
       animateSidebarText();
@@ -64,7 +98,7 @@ export const Header = () => {
   const animateSidebarText = () => {
     if (!sidebarRef.current) return;
     const items = sidebarRef.current.querySelectorAll(".animatable-text");
-    console.log({items})
+    console.log({ items });
     anime({
       targets: items,
       translateY: [50, 0], // Start from 50px above to original position
@@ -100,7 +134,12 @@ export const Header = () => {
                 ? navItems?.map((content, index) => {
                     return (
                       <span
-                        className="font-medium text-gray-300 cursor-pointer"
+                        className={`font-medium cursor-pointer transform transition-all ease-in-out duration-500 px-1 ${
+                          activeSection === content?.link
+                            ? "text-teal-500"
+                            : "text-gray-300 hover:text-teal-400"
+                        }`}
+                        onClick={() => handleSmoothScroll(content?.link)}
                         key={index}
                       >
                         {content?.title}
@@ -121,7 +160,6 @@ export const Header = () => {
 
           {/* Sidebar for mobile */}
           <div
-           
             className={`md:hidden w-full h-full py-2 bg-grey-700 z-50 transition-transform ease-in-out duration-500 transform overflow-scroll`}
           >
             {/* Close Button */}
@@ -165,7 +203,7 @@ export const Header = () => {
         </div>
 
         <div
-         ref={sidebarRef}
+          ref={sidebarRef}
           className={`bg-[#28a69b0d] backdrop-blur-2xl border border-[#e2e8ff1a] box-shadow-header w-full py-9 absolute max-w-[90%] mt-4 mx-auto rounded-b-2xl z-0 transform transition-all ease-in-out duration-300 md:hidden ${
             isSidebarOpen
               ? "min-h-[90vh] max-h-[90vh] top-6 visible opacity-100"
