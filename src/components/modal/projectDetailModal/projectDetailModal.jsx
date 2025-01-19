@@ -106,7 +106,7 @@ export const ProjectDetailModal = ({
                       src={image}
                       key={index}
                       alt={"thumbnail Images" + index}
-                      className="w-full rounded-lg pb-10"
+                      className="w-full  first:rounded-t-lg last:rounded-b-lg"
                     />
                   );
                 })
