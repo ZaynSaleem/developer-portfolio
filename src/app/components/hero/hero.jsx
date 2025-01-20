@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col gap-8 justify-center items-center">
+    <div className="flex flex-col gap-8 justify-center items-center" id="home">
       {/* ============= AVATAR ============= */}
       <div>
         <Image
@@ -17,30 +17,32 @@ const HeroSection = () => {
       <div className="text-center text-2xl !leading-tight font-extrabold sm:text-4xl lg:text-6xl lg:max-w-[60%]">
         <span className="text-gray-300"> Hi, I’m </span>{" "}
         {/* <span className="bg-clip-text bg-gradient-to-r from-[#FF8660] to-[#9A33FF] text-transparent"> */}
-        <span className="text-teal-400">
-          {" "}
-          Zain Saleem
-        </span>{" "}
-        <br /> a Software Engineer
+        <span className="text-teal-400"> Zain Saleem</span> <br /> a Software
+        Engineer
       </div>
 
       {/* ============= DESCRIPTION ============= */}
 
       <p className="text-center container">
-        I am a seasoned full-stack software engineer with over 8 years of
-        professional experience, specializing in backend development. My
-        expertise lies in crafting robust and scalable SaaS-based architectures
-        on the Amazon AWS platform.
+        {/* With over 3 years of experience in designing
+        and developing modern web applications. I specialize in both frontend
+        and backend development, offering expertise in creating visually
+        appealing, responsive, and user-friendly interfaces while ensuring
+        robust and efficient backend systems. */}
+        With 3 years of experience crafting seamless user experiences and robust
+        backend systems. I specialize in building modern, scalable web
+        applications that combine creativity with functionality to deliver
+        exceptional results.
       </p>
 
       <div className="flex gap-3 items-center">
         <button
           type="button"
-          className="border border-white text-white font-medium rounded-full py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-black hover:bg-white"
+          className="border border-white text-white font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-black hover:bg-white"
         >
           Get in touch
         </button>
-        <button className="border border-white bg-white text-black font-medium rounded-full py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-white hover:bg-transparent">
+        <button className="border border-white bg-white text-black font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-white hover:bg-transparent">
           Download CV
         </button>
       </div>
