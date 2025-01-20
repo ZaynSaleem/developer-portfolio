@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <AnimatedStarsCanva />
         <Header />
         {children}
-        <Footer />
+        <Footer className="z-50" />
       </body>
     </html>
   );
