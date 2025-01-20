@@ -17,8 +17,9 @@ const Projects = () => {
         "OTO Work is a professional blog website designed to promote its powerful CMS application, the OTO App — an all-in-one solution for managing automated proposals, contracts, and invoices. The platform showcases key features like easy client management, time tracking, and expense management, offering businesses a seamless way to streamline their workflow. The website was built using React.js for a fast, responsive, and dynamic user experience, while Tailwind CSS ensured a modern, clean, and fully responsive design. I collaborated closely with the client to translate their vision into a stunning design, starting with detailed Figma prototypes and delivering a highly optimized and functional final product. This project not only highlights the OTO App's features but also serves as a hub for valuable content, driving user engagement and interest in the CMS",
       thumbnailImage: "/assets/projects/otoBlog.jpeg",
       images: [
-        "/assets/projects/otoBlog.jpeg",
-        "/assets/projects/otoWorkFullWebsite.jpeg",
+        "/assets/projects/otoWorkHeroSection.png",
+        "/assets/projects/otoWorkManageSection.png",
+        "/assets/projects/otoWorkLastSection.png",
       ],
       technologies: ["React Js", "Tailwind CSS", "Strapi"],
     },
@@ -29,19 +30,29 @@ const Projects = () => {
       description:
         "Graphinox is a creative design agency that offers top-notch services such as logo design, animations, and branding solutions. The client’s primary goal was to establish a professional, visually engaging online presence to showcase their services and attract potential clients. project Highlights: - Stunning Visuals - A clean, professional layout with eye-catching animations to reflect the agency’s creative expertise.- Responsive Design - The website is optimized for all devices, ensuring a smooth user experience on mobile, tablet, and desktop. - Service Showcase – Dedicated sections for their core offerings like Logo Design, Animations, UX/UI -Design, and Online Marketing. - Engaging UI/UX – Designed with a focus on user engagement and ease of navigation. - Speed & Performance – Leveraging Next.js for blazing-fast performance and seamless transitions.",
       thumbnailImage: "/assets/projects/graphinox.jpeg",
+      images: [
+        "/assets/projects/graphinox/graphinoxHeroSection.png",
+        "/assets/projects/graphinox/graphinoxProjectsSection.png",
+        "/assets/projects/graphinox/graphinoxMidSection.png",
+        "/assets/projects/graphinox/graphinoxLastSection.png",
+      ],
       technologies: ["Next Js", "Tailwind CSS"],
     },
     {
-      title: "Budget Collector",
+      title: "Budget Collector Mobile App and CMS",
       subheading:
-        "Budget Collector website designed to promote its powerful CMS application, the Budget Collector App — an all-in-one solution",
+        "Budget Collector is a comprehensive platform designed for art enthusiasts and museums, combining a mobile app and a powerful content management system (CMS)",
+      description:
+        "Budget Collector is a comprehensive platform designed for art enthusiasts and museums, combining a mobile app and a powerful content management system (CMS). The mobile app allows users to explore, showcase, and purchase art, while the CMS empowers museums to manage their collections, track statistics, and add new artwork seamlessly. Built with React Native for the mobile app and Next.js for the CMS, the platform delivers a sleek, user-friendly interface, enhanced by Tailwind CSS for responsive design and MongoDB for robust data management. The design, crafted in Figma, ensures a visually stunning and intuitive user experience.",
       thumbnailImage: "/assets/projects/budgetCollector.jpeg",
-      technologies: ["Next Js", "Tailwind CSS", "Rest API", "Mongo DB"],
+      technologies: ["Next Js", "React Native", "Tailwind CSS", "Rest API", "Mongo DB"],
     },
     {
-      title: "AAHMB Real Estate",
+      title: "AAHMB Real Estate Website",
       subheading:
-        "AAHMB Real Estate website designed to promote its powerful CMS application, the Real Estate App — an all-in-one solution",
+        "AAHMB Real Estate is a professional website designed to showcase real estate projects for builders and developers.",
+      description:
+        "AAHMB Real Estate is a professional website designed to showcase real estate projects for builders and developers. The client wanted a modern platform to highlight their past work and attract potential clients. To enhance the website's appeal, I incorporated custom animations that bring their portfolio to life.",
       thumbnailImage: "/assets/projects/aahmbRealEstate.jpeg",
       technologies: ["Next Js", "Tailwind CSS"],
     },
@@ -55,7 +66,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 container relative">
+    <div className="flex flex-col gap-8 container relative" id="projects">
       <Heading title={"PROJECTS"} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
