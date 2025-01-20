@@ -1,6 +1,6 @@
 const Heading = ({ title }) => {
   return (
-    <h1 className="text-transparent linear-gradient-header-1 bg-clip-text font-semibold text-center uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+    <h1 className=" text-teal-400 font-semibold text-center uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
       {title}
     </h1>
   );
