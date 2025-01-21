@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
 
 const HeroSection = () => {
+  const handleClick = () => {
+    window.location.href = `mailto:zainsaleem456@gmail.com`;
+  };
+
   return (
     <div className="flex flex-col gap-8 justify-center items-center" id="home">
       {/* ============= AVATAR ============= */}
@@ -38,13 +43,19 @@ const HeroSection = () => {
       <div className="flex gap-3 items-center">
         <button
           type="button"
+          onClick={handleClick}
           className="border border-white text-white font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-black hover:bg-white"
         >
           Get in touch
         </button>
-        <button className="border border-white bg-white text-black font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-white hover:bg-transparent">
-          Download CV
-        </button>
+        <div className="border border-white bg-white text-black font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-white hover:bg-transparent">
+          <a
+            href="/assets/resume/MuhammadZain'sResume.pdf"
+            download="MuhammadZainResume.pdf"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
     </div>
   );
