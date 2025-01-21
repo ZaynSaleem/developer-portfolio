@@ -21,18 +21,22 @@ export const Header = () => {
       title: "Projects",
       link: "projects",
     },
+    // {
+    //   title: "Blogs",
+    //   link: "blogs",
+    // },
+    {
+      title: "Skills",
+      link: "skills",
+    },
     {
       title: "Career",
       link: "career",
     },
-    {
-      title: "Blogs",
-      link: "blogs",
-    },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSidebarOpen, SetIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, SetIsSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -82,6 +86,7 @@ export const Header = () => {
     const section = document.getElementById(link);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+      SetIsSidebarOpen(false);
     }
   };
 
@@ -93,6 +98,10 @@ export const Header = () => {
 
   const toggleSideBar = () => {
     SetIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleClick = () => {
+    window.location.href = `mailto:zainsaleem456@gmail.com`;
   };
 
   const animateSidebarText = () => {
@@ -151,7 +160,10 @@ export const Header = () => {
 
             {/* ============== NAV ITEMS ============== */}
             {/* linear-gradient-header */}
-            <div className="border border-teal-400 text-teal-400 rounded-xl py-2 font-medium sm:px-4 lg:text-lg lg:px-8">
+            <div
+              onClick={handleClick}
+              className="border border-teal-400 text-teal-400 rounded-xl py-2 font-medium sm:px-4 lg:text-lg lg:px-8 hover:bg-teal-500 hover:text-white transform transition-all ease-in-out duration-300 cursor-pointer"
+            >
               Hire me
             </div>
           </div>
@@ -214,14 +226,14 @@ export const Header = () => {
             <div className="flex flex-col gap-3 padding-top-64 padding-bottom-148">
               {navItems && navItems?.length
                 ? navItems?.map((item, index) => (
-                    <Link
+                    <span
                       key={index}
-                      href={item?.url || "#"}
+                      onClick={() => handleSmoothScroll(item?.link)}
                       className="animatable-text text-teal-500 text-80 uppercase font-medium opacity-0 hover:transform hover:transition-all hover:ease-in-out hover:duration-300 hover:text-gold-200"
                     >
                       {/* onClick={toggleSidebar} */}
                       {item?.title}
-                    </Link>
+                    </span>
                   ))
                 : null}
             </div>
