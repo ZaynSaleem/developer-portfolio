@@ -9,10 +9,10 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col gap-8 justify-center items-center" id="home">
       {/* ============= AVATAR ============= */}
-      <div>
+      <div className="overflow-hidden rounded-full">
         <Image
           alt="img"
-          src={"/assets/hero/avatar.png"}
+          src={"/assets/hero/avatar1.png"}
           width={200}
           height={200}
         />
