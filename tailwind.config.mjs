@@ -13,7 +13,17 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        agustina: ["Agustina-Signature", 'Regular'],
+        agustina: ["Agustina-Signature", "Regular"],
+      },
+
+      keyframes: {
+        scrollY: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+      },
+      animation: {
+        scrollY: "scrollY 100s linear infinite",
       },
     },
   },
