@@ -1,0 +1,86 @@
+[
+    {
+        "icon": "/assets/skills/html.png",
+        "color": "text-red-500",
+        "title": "HTML",
+        "description": "3 years of experience in crafting well-structured, semantic web pages.",
+        "progress": "90%"
+    },
+    {
+        "icon": "/assets/skills/css.png",
+        "color": "text-blue-400",
+        "title": "CSS",
+        "description": "3 years of expertise in styling responsive and visually appealing websites.",
+        "progress": "85%"
+    },
+    {
+        "icon": "/assets/skills/javascript.png",
+        "color": "text-yellow-500",
+        "title": "JavaScript (JS)",
+        "description": "Proficient in building dynamic, interactive web applications with 3 years of experience.",
+        "progress": "80%"
+    },
+    {
+        "icon": "/assets/skills/typescript.png",
+        "color": "text-yellow-500",
+        "title": "TypeScript (TS)",
+        "description": "Experienced in writing type-safe, scalable code with TypeScript usage.",
+        "progress": "80%"
+    },
+    {
+        "icon": "/assets/skills/react.png",
+        "color": "text-cyan-400",
+        "title": "React",
+        "description": "3 years of experience developing fast, interactive UIs with React.",
+        "progress": "85%"
+    },
+    {
+        "icon": "/assets/skills/vue.png",
+        "color": "text-cyan-400",
+        "title": "Vue Js",
+        "description": "Skilled in building reactive and efficient applications with Vue.js.",
+        "progress": "70%"
+    },
+    {
+        "icon": "/assets/skills/angularjs.png",
+        "color": "text-cyan-400",
+        "title": "Angular",
+        "description": "Proficient in building scalable and robust applications using Angular.",
+        "progress": "65%"
+    },
+    {
+        "icon": "/assets/skills/nestjs.png",
+        "color": "text-cyan-400",
+        "title": "Nest JS",
+        "description": "Experienced in building efficient server-side applications with NestJS.",
+        "progress": "70%"
+    },
+    {
+        "icon": "/assets/skills/nodejs.png",
+        "color": "text-cyan-400",
+        "title": "Node JS",
+        "description": "Building backend services and APIs with Node.js.",
+        "progress": "60%"
+    },
+    {
+        "icon": "/assets/skills/mongoDb.png",
+        "color": "text-cyan-400",
+        "title": "MongoDB",
+        "description": "Skilled in working with MongoDB for building scalable, NoSQL databases.",
+        "progress": "70%"
+    },
+    {
+        "icon": "/assets/skills/mysql.png",
+        "color": "text-cyan-400",
+        "title": "MySQL",
+        "description": "Proficient in managing relational databases and writing efficient SQL queries.",
+        "progress": "75%"
+    },
+    {
+        "icon": "/assets/skills/tailwind.png",
+        "color": "text-teal-400",
+        "title": "Tailwind CSS",
+        "description": "Experienced in building custom, responsive designs with Tailwind CSS.",
+        "progress": "90%"
+    }
+]
