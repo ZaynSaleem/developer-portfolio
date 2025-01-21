@@ -66,7 +66,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 container relative" id="projects">
+    <div className="flex flex-col gap-14 container relative" id="projects">
       <Heading title={"PROJECTS"} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
