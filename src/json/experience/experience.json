@@ -4,28 +4,31 @@
     "designation": "Team Lead",
     "startDate": "September 2024",
     "endDate": "Present",
-    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "description": "As Team Lead at Paz Technologies, I oversee a dynamic team of developers, guiding them in delivering high-quality software solutions. My role includes coordinating project timelines, managing resources, and ensuring smooth collaboration across teams. I also provide technical mentorship, ensuring our projects meet client expectations while maintaining efficiency and innovation.",
     "companyLogo": "",
     "technologies": [
       "Next Js",
+      "Angular",
       "Nest Js",
-      "Mongo DB",
-      "MySql"
+      "MySql",
+      "Tailwind CSS"
     ]
   },
   {
     "company": "Digitaleap",
     "designation": "Software Engineer",
-    "startDate": "November 2021",
+    "startDate": "September 2021",
     "endDate": "September 2024",
-    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "description": "As a Software Engineer at Digitaleap, I spent three years working on diverse technologies, delivering end-to-end solutions for multiple projects. I played a key role in designing, developing, and deploying web applications while ensuring high-quality results. This experience enhanced my expertise in full-stack development and project management..",
     "companyLogo": "",
     "technologies": [
-      "React",
-      "Next js",
       "JavaScript",
+      "React Js",
+      "Next Js",
+      "Vue Js",
       "Mongo DB",
-      "Rest API"
+      "Rest API",
+      "Tailwind CSS"
     ]
   },
   {
@@ -33,7 +36,7 @@
     "designation": "Assistant Developer",
     "startDate": "January 2020",
     "endDate": "March 2020",
-    "description": "As a Senior Software Engineer at Digitaleap, I played a pivotal role in developing innovative solutions for Digitaleap's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+    "description": "As an Assistant Developer at Minibig, I contributed to projects using PHP, Laravel, and JavaScript. I supported senior developers by troubleshooting issues, writing clean code, and implementing small features. This role helped me sharpen my problem-solving skills and gain hands-on experience in a collaborative development environment.",
     "companyLogo": "",
     "technologies": [
       "PHP",
