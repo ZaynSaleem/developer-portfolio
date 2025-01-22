@@ -50,7 +50,7 @@ const HeroSection = () => {
         </button>
         <div className="border border-white bg-white text-black font-medium rounded-xl py-3 px-5 transform transition-all ease-in-out duration-500 hover:text-white hover:bg-transparent">
           <a
-            href="/assets/resume/MuhammadZain'sResume.pdf"
+            href="/assets/resume/MuhammadZainResume-updated.pdf"
             download="MuhammadZainResume.pdf"
           >
             Download CV
